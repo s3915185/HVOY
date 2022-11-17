@@ -19,6 +19,12 @@ public class Start extends AppCompatActivity {
     public static int getSize() {
         return size;
     }
+    public static void increasedBy1() {
+        size++;
+    }
+    public static void addCustomer(Customer customer) {
+        customers.add(customer);
+    }
 
     private static ArrayList<Customer> customers = new ArrayList<>();
     private static int size = 0;
@@ -36,7 +42,7 @@ public class Start extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Start.this, loginPhase.class);
-                startActivity(intent);
+                startActivityForResult(intent, 200);
             }
         });
 
@@ -44,7 +50,7 @@ public class Start extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Start.this, signupPhase.class);
-                startActivity(intent);
+                startActivityForResult(intent, 200);
             }
         });
 

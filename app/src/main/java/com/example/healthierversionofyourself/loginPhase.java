@@ -30,16 +30,21 @@ public class loginPhase extends AppCompatActivity {
                 EditText password_input = (EditText) findViewById(R.id.password_input);
                 Integer id = Integer.parseInt(id_input.getText().toString());
                 String password = password_input.getText().toString();
-                if ((id == 00001) && (password == "admin")) {
+             //   Toast.makeText(loginPhase.this, id, Toast.LENGTH_LONG).show();
+                if ((id.equals(1)) && (password.equals("1"))) {
                     Intent home = new Intent(loginPhase.this, home.class);
                     home.putExtra("id", id);
                     startActivity(home);
+
                 }
+               else {
+                  Toast.makeText(loginPhase.this, "Incorrect", Toast.LENGTH_SHORT).show();
+              }
 
             }
         });
 
-        back_button.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent loginPage = new Intent(loginPhase.this, Start.class);

@@ -35,14 +35,18 @@ public class signupPhase extends AppCompatActivity {
                 String password = password_input.getText().toString();
                 String phonenumber = phone_input.getText().toString();
                 boolean hasId = false;
-                if (id == 00001) {
+                if (id == 1) {
                     Toast.makeText(signupPhase.this, "Id already existed", Toast.LENGTH_SHORT).show();
                 }
                 else if (id.equals("") || (password.equals("") || phonenumber.equals(""))){
                     Toast.makeText(signupPhase.this, "Inputs cant be left empty", Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    Customer customer = new Customer(id, password, phonenumber);
+                    Start.addCustomer(customer);
+                    Start.increasedBy1();
                     Intent home = new Intent(signupPhase.this, home.class);
+                    home.putExtra("id", id);
                     startActivity(home);
                 }
             }

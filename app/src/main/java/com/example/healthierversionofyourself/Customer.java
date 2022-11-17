@@ -1,17 +1,17 @@
 package com.example.healthierversionofyourself;
 
 public class Customer {
-    private int id;
+    private Integer id;
     private String password;
     private String phonenumber;
 
-    public Customer(int id, String password, String phonenumber) {
+    public Customer(Integer id, String password, String phonenumber) {
         this.id = id;
         this.password = password;
         this.phonenumber = phonenumber;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
