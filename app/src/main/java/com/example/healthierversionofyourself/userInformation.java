@@ -38,7 +38,7 @@ public class userInformation extends AppCompatActivity {
         back_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(userInformation.this, Start.class);
+                Intent intent = new Intent(userInformation.this, home.class);
                 setResult(RESULT_OK, intent);
                 finish();
             }

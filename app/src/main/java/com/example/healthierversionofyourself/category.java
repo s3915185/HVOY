@@ -30,7 +30,7 @@ public class category extends AppCompatActivity implements DatePickerDialog.OnDa
         findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(category.this, Start.class);
+                Intent intent = new Intent(category.this, home.class);
                 setResult(RESULT_OK, intent);
                 finish();
             }

@@ -26,8 +26,9 @@ public class food_category extends AppCompatActivity {
         findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent loginPage = new Intent(food_category.this, Start.class);
-                setResult(RESULT_OK, loginPage);
+                Intent intent = new Intent(food_category.this, category.class);
+                intent.putExtra("points", points);
+                setResult(RESULT_OK, intent);
                 finish();
             }
         });

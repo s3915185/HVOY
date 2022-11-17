@@ -15,7 +15,7 @@ public class knowledge_category extends AppCompatActivity {
         findViewById(R.id.back_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent loginPage = new Intent(knowledge_category.this, Start.class);
+                Intent loginPage = new Intent(knowledge_category.this, category.class);
                 setResult(RESULT_OK, loginPage);
                 finish();
             }
